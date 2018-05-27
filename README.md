@@ -3,7 +3,7 @@
 Installation der Module
 -----------------------
 
-npm install -g eslint
+npm install -g eslint\n
 npm install -g less
 npm install -g browserify
 npm install -g babel-minify
