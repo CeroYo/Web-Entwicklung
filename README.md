@@ -24,4 +24,13 @@ jsdoc -> Erzeugung von Dokumentationsdateien
 npm install -g mocha
 mocha -> Unit-Tests
 
-TODO: npm als Build-Tool
+npm install -g place
+place -> Ersetzung von Dateien
+
+npm als Build-Tool
+------------------
+npm run BEFEHL immer im Verzeichnis "webapp" oder "server" ausführen
+
+npm run debug -> Durchläuft Build-Prozess ohne die Dateien zu minifizieren
+
+npm run build -> Durchläuft kompletten Build-Prozess

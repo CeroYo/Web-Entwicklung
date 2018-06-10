@@ -5,6 +5,7 @@
     },
     "devDependencies": {
         "eslint": "latest",
+        "place": "latest",
         "less": "latest",
         "less-plugin-clean-css": "latest",
         "browserify": "latest",
@@ -24,7 +25,7 @@
         "css:min": "lessc --clean-css styles/style.less dist/style.min.css",
         "prejs": "npm install lib && npm run lint && npm test",
         "js": "browserify js/Main.js > dist/main.js",
-        "js:min": "npm run js && babili dist/main.js > dist/main.min.js",
+        "js:min": "npm run js && babel-minify dist/main.js > dist/main.min.js",
         "postjs:min": "rm -f dist/main.js"
     }
 }
