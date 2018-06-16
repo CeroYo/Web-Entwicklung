@@ -1,0 +1,32 @@
+{
+    "name": "server",
+    "dependencies": {
+        "lib": "^3.0.2"
+    },
+    "devDependencies": {
+        "eslint": "latest",
+        "place": "latest",
+        "less": "latest",
+        "less-plugin-clean-css": "latest",
+        "browserify": "latest",
+        "babel-minify": "latest",
+        "mocha": "latest",
+        "express": "latest"
+    },
+    "scripts": {
+        "clean": "npm run clean:dist && rm -rf node_modules",
+        "clean:dist": "rm -rf dist",
+        "lint": "eslint -c ../.eslintrc.json js/**",
+        "test": "mocha",
+        "debug": "npm run clean:dist && mkdir dist && npm run static && npm run css && npm run js",
+        "build": "npm run clean && npm install && mkdir dist && npm run static:min && npm run css:min && npm run js:min",
+        "static": "cp -r assets/. dist && cp index.html dist/index.html",
+        "static:min": "npm run static && place dist/index.html style.css style.min.css && place dist/index.html main.js main.min.js",
+        "css": "lessc styles/style.less dist/style.css",
+        "css:min": "lessc --clean-css styles/style.less dist/style.min.css",
+        "prejs": "npm install lib && npm run lint && npm test",
+        "js": "browserify js/Main.js > dist/main.js",
+        "js:min": "npm run js && babel-minify dist/main.js > dist/main.min.js",
+        "postjs:min": "rm -f dist/main.js"
+    }
+}

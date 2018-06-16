@@ -27,6 +27,9 @@ mocha -> Unit-Tests
 npm install -g place
 place -> Ersetzung von Dateien
 
+npm install express
+express -> Wrapper für HTTP-Server
+
 npm als Build-Tool
 ------------------
 npm run BEFEHL immer im Verzeichnis "webapp" oder "server" ausführen
