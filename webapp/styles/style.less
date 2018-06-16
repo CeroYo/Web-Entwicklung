@@ -1,14 +1,31 @@
+@import (inline) "pure.css";
 @import (inline) "tables.css";
-@font-size: 12pt;
+@import (inline) "grids-responsive.css";
+@import (inline) "buttons.css";
+@font-size: 1em;
+@button-width: 100%;
 
 body {
-font-size: @font-size;
+    font-size: @font-size;
 }
 
-.sitzungliste {
-    float: left;
+.header {
+    text-align: center;
 }
 
-.bearbeitungSitzungsliste {
-    float: right;
+.sitzungsliste-table {
+    width: 100%;
 }
+
+.center {
+    justify-content: center;
+}
+
+.pure-g {
+    display: flex;
+}
+
+.pure-button {
+    width: @button-width;
+}
+
